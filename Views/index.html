@@ -1,0 +1,28 @@
+{{define "Index"}}
+{{template "head"}}
+<body class="bg-white text-muted">
+    <div class="container">
+        <div class="row vh-100 justify-content-center align-items-center">
+            <div class="card rounded-0" style="max-width: 800px;">
+                <div class="row g-0 p-5 justify-content-center">
+                    <div class="col-md-12">
+                        <h5 class="text-muted text-center">Digite o valor do saque</h5><br>
+                        <p class="text-muted text-center">Ao digitar o valor, por favor, não utilize vírgulas nem pontos (exemplo: 120)</p>
+                        <form method="POST" action="/sacar">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" name="amount" class="form-control" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-success">Sacar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div> 
+</body>
+</html>
+{{end}}
