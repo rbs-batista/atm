@@ -1,7 +1,5 @@
 # Simulador de saque em caixa eletrônico
 
-Breve descrição do projeto.
-
 ## Requisitos
 
 - Go (versão go1.18.1 ou superior)
