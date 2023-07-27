@@ -28,7 +28,7 @@
 3. Instale as dependências do projeto:
 
    ```
-   go get ./...
+   go get
    ```
 ## Como Rodar
 
