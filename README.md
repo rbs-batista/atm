@@ -1,4 +1,4 @@
-# Simulador de saque em caixa eletrônico
+# Simulador de saque em caixas eletrônicos
 
 ## Requisitos
 
