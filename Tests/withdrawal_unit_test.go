@@ -2,6 +2,7 @@ package services
 
 import (
 	services "atm/Services"
+	validations "atm/Validations"
 	"reflect"
 	"testing"
 )
@@ -26,6 +27,27 @@ func TestCalculateBills(t *testing.T) {
 
 		if !reflect.DeepEqual(result, test.expected) {
 			t.Errorf("calculateBills returned %v, expected %v", result, test.expected)
+		}
+	}
+}
+func TestValidation(t *testing.T) {
+
+	tests := []struct {
+		amount   int
+		expected bool
+	}{
+		{amount: 3, expected: true},
+		{amount: 1, expected: true},
+		{amount: 0, expected: true},
+		{amount: 1000000001, expected: true},
+		{amount: 2, expected: false},
+	}
+
+	for _, test := range tests {
+		result := validations.Validate(test.amount)
+
+		if !reflect.DeepEqual(result, test.expected) {
+			t.Errorf("Validation send %v, returned %v, expected %v", test.amount, result, test.expected)
 		}
 	}
 }
